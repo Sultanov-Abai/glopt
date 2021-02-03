@@ -1,0 +1,107 @@
+.delivery
+    &__cards
+        display: flex
+        justify-content: center
+        align-items: center
+        padding-top: 34px
+    &__card
+        margin-right: 28px 
+        height: 355px
+        width: 265px
+        &:last-child
+            margin-right: 0
+        &-title
+            height: 61px
+            width: 261px            
+            background-color: #25333C
+            &_text
+                padding: 24px 0 22px 0
+                color: #FFFFFF
+                font-weight: 700
+                font-size: 16px
+                text-align: center
+                text-transform: uppercase
+        &-icon
+            display: flex
+            justify-content: center
+            padding: 14px 0 10px 0
+        &-subtitle
+            color: #2E2E2E
+            font-weight: 500
+            font-size: 14px
+            text-align: center
+            text-transform: uppercase
+        &-price
+            color: $main-color
+            font-size: 24px
+            text-align: center
+        &-descr
+            padding: 19px 18px 25px 13px
+            color: #2E2E2E
+            font-weight: 300
+            font-size: 14px
+            line-height: 20px
+            text-align: center
+        &-btn 
+            display: flex
+            justify-content: center
+            align-items: center
+            margin: 0 auto
+            font-size: 15px
+    &__form
+        position: relative
+        &-icon
+            margin: 19px auto 0 auto
+            position: absolute
+            top: 81px
+            left: 50%
+            transform: translateX(-50%)
+            height: 103px
+            width: 103px
+            img
+                padding: 18px 18px 18px 18px
+                border: solid 1px $main-color
+                border-radius: 100px
+            &_left
+                position: absolute
+                width: 490px
+                top: 150px
+                left: 0
+            &_right
+                position: absolute
+                width: 490px
+                top: 150px
+                right: 0
+        &-list
+            display: flex
+            justify-content: center
+            margin: 71px 0 79px 0
+            border-right: solid 1px #d4d4d4
+            border-left: solid 1px #d4d4d4
+            padding: 63px 0 53px 0
+        &-input
+            margin: 17px 6px 0 0
+            padding-left: 28px
+            height: 45px
+            width: 268px
+            border: solid 1px #d4d4d4
+            border-radius: 100px
+            background-color:#FFFFFF
+            &:last-child
+                margin: 17px 0 0 0
+        &-btn
+            margin: 0
+            position: absolute
+            top: 318px
+            left: 50%
+            transform: translateX(-50%)
+            &_left
+                position: absolute
+                width: 460px
+                top: 330px
+                left: 0
+            &_right
+                position: absolute
+                width: 460px
+                top: 330px
+                right: 0
