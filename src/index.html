@@ -10,15 +10,15 @@
     <header>
         <div class="container">
             <nav class="menu">
-                <a href="index.html" class="menu__logo"><img src="icons/glopt.png" alt="logotype" class="menu__logo-img"></a>
+                <a href="#" class="menu__logo"><img src="icons/glopt.png" alt="logotype" class="menu__logo-img"></a>
                 
                 <ul class="menu__list">
-                    <a href="#" class="menu__item">Преимущества</a>
-                    <a href="#" class="menu__item">Наша работа</a>
-                    <a href="#" class="menu__item">Цены</a>
-                    <a href="#" class="menu__item">Схема работы</a>
-                    <a href="#" class="menu__item">Отзывы</a>
-                    <a href="#" class="menu__item">контакты</a>
+                    <a href="#advantages" class="menu__item">Преимущества</a>
+                    <a href="#info" class="menu__item">      Наша работа</a>
+                    <a href="#delivery" class="menu__item">  Цены</a>
+                    <a href="#scheme" class="menu__item">    Схема работы</a>
+                    <a href="#review" class="menu__item">    Отзывы</a>
+                    <a href="#address" class="menu__item">   Контакты</a>
                 </ul>
 
                 <div class="menu__questions">
@@ -61,7 +61,7 @@
         </div>
     </header>
 
-    <div class="advantages">
+    <div class="advantages" id="advantages">
         <div class="container">
             <div class="advantages__title title">Преимущества работы с GlobalOpt</div>
             <div class="row">
@@ -142,7 +142,7 @@
         </div>
     </div>
 
-    <div class="info">
+    <div class="info" id="info">
         <div class="container">
             <div class="info__title title">Наша работа - больше чем просто доставка</div>
         <hr class="hr">
@@ -177,7 +177,7 @@
         </div>
     </div>
 
-    <div class="delivery">
+    <div class="delivery" id="delivery">
         <div class="container">
             <div class="delivery__title title">Цены на любой вариант доставки</div>
             <hr class="hr">
@@ -187,34 +187,67 @@
             <div class="delivery__cards">
                 <div class="delivery__card">
                     <div class="delivery__card-title"><div class="delivery__card-title_text">Доставка морем</div></div>
-                    <div class="delivery__card-icon"><img src="icons/variants/ship.png" alt="ship"></div>
-                    <div class="delivery__card-subtitle">Доставка 35-50 дней</div>
-                    <div class="delivery__card-price">от 0,3$ за 1 кг</div>
-                    <div class="delivery__card-descr">Морские перевозки грузов из Китая в Россию за 35 дней с прохождением таможни</div>
+                    <div class="delivery__main">
+                        <div class="delivery__showed">
+                            <div class="delivery__card-icon"><img src="icons/variants/ship.png" alt="ship"></div>
+                            <div class="delivery__card-subtitle">Доставка 35-50 дней</div>
+                            <div class="delivery__card-price">от 0,3$ за 1 кг</div>
+                            <div class="delivery__card-descr">Морские перевозки грузов из Китая в Россию за 35 дней с прохождением таможни</div>
+                        </div>
+                        <div class="delivery__hidden">
+                            <div class="delivery__card-descr delivery__card-descr_hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam commodi delectus neque dolore eaque voluptates possimus, aliquid est at temporibus ab cupiditate incidunt eligendi perspiciatis voluptatum culpa in nisi accusamus.</div>
+                            <div class="delivery__back">Назад</div>
+                        </div>
+                    </div>                 
                     <div class="delivery__card-btn btn">Подробнее</div>
                 </div>
                 <div class="delivery__card">
                     <div class="delivery__card-title"><div class="delivery__card-title_text">Ж/Д доставка</div></div>
-                    <div class="delivery__card-icon"><img src="icons/variants/train.png" alt="train"></div>
-                    <div class="delivery__card-subtitle">Доставка 15-28 дней</div>
-                    <div class="delivery__card-price">от 1$ за 1 кг</div>
-                    <div class="delivery__card-descr">ЖД перевозки грузов из Китая в Россию от 2 недель с прохождением таможни</div>
+                    <div class="delivery__main">
+                        <div class="delivery__showed">
+                            <div class="delivery__card-icon"><img src="icons/variants/train.png" alt="train"></div>
+                            <div class="delivery__card-subtitle">Доставка 15-28 дней</div>
+                            <div class="delivery__card-price">от 1$ за 1 кг</div>
+                            <div class="delivery__card-descr">ЖД перевозки грузов из Китая в Россию от 2 недель с прохождением таможни</div>
+                        </div>
+                        <div class="delivery__hidden">
+                            <div class="delivery__card-descr delivery__card-descr_hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam commodi delectus neque dolore eaque voluptates possimus, aliquid est at temporibus ab cupiditate incidunt eligendi perspiciatis voluptatum culpa in nisi accusamus.</div>
+                            <div class="delivery__back">Назад</div>
+                        </div>
+                    </div>
                     <div class="delivery__card-btn btn">Подробнее</div>
                 </div>
                 <div class="delivery__card">
                     <div class="delivery__card-title"><div class="delivery__card-title_text">Автодоставка</div></div>
-                    <div class="delivery__card-icon"><img src="icons/variants/truck.png" alt="truck"></div>
-                    <div class="delivery__card-subtitle">Доставка 12-20 дня</div>
-                    <div class="delivery__card-price">от 1$ за 1 кг</div>
-                    <div class="delivery__card-descr">Автоперевозки грузов из Китая в Россию от 2 недель с прохождением таможни</div>
+                    <div class="delivery__main">
+                        <div class="delivery__showed">
+                            <div class="delivery__card-icon"><img src="icons/variants/truck.png" alt="truck"></div>
+                            <div class="delivery__card-subtitle">Доставка 12-20 дня</div>
+                            <div class="delivery__card-price">от 1$ за 1 кг</div>
+                            <div class="delivery__card-descr">Автоперевозки грузов из Китая в Россию от 2 недель с прохождением таможни</div>
+                        </div>
+                        <div class="delivery__hidden">
+                            <div class="delivery__card-descr delivery__card-descr_hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam commodi delectus neque dolore eaque voluptates possimus, aliquid est at temporibus ab cupiditate incidunt eligendi perspiciatis voluptatum culpa in nisi accusamus.</div>
+                            <div class="delivery__back">Назад</div>
+                        </div>
+                    </div>
+                    
                     <div class="delivery__card-btn btn">Подробнее</div>
                 </div>
                 <div class="delivery__card">
                     <div class="delivery__card-title"><div class="delivery__card-title_text">Авиа доставка</div></div>
-                    <div class="delivery__card-icon"><img src="icons/variants/airplane.png" alt="airplane"></div>
-                    <div class="delivery__card-subtitle">Доставка 1-12 дней</div>
-                    <div class="delivery__card-price">от 6$ за 1 кг</div>
-                    <div class="delivery__card-descr">Авиаперевозки грузов из Китая в Россию до 2 недель прохождением таможни</div>
+                    <div class="delivery__main">
+                        <div class="delivery__showed">
+                            <div class="delivery__card-icon"><img src="icons/variants/airplane.png" alt="airplane"></div>
+                            <div class="delivery__card-subtitle">Доставка 1-12 дней</div>
+                            <div class="delivery__card-price">от 6$ за 1 кг</div>
+                            <div class="delivery__card-descr">Авиаперевозки грузов из Китая в Россию до 2 недель прохождением таможни</div>
+                        </div>
+                        <div class="delivery__hidden">
+                            <div class="delivery__card-descr delivery__card-descr_hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam commodi delectus neque dolore eaque voluptates possimus, aliquid est at temporibus ab cupiditate incidunt eligendi perspiciatis voluptatum culpa in nisi accusamus.</div>
+                            <div class="delivery__back">Назад</div>
+                        </div>
+                    </div>
                     <div class="delivery__card-btn btn">Подробнее</div>
                 </div>
             </div>
@@ -246,7 +279,7 @@
         </div>
     </div>
 
-    <div class="scheme">
+    <div class="scheme" id="scheme">
         <div class="container">
             <div class="scheme__title title">Схема работы с нами</div>
             <div class="scheme__list">
@@ -289,7 +322,7 @@
         </div>
     </div>
 
-    <div class="review">
+    <div class="review" id="review">
         <div class="container">
             <div class="delivery__title title">отзывы наших клиентов</div>
             <hr class="hr">
@@ -339,7 +372,7 @@
         </div>
     </div>
 
-    <div class="address">
+    <div class="address" id="address">
         <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A20feeedfb7ee897bd7175ec716d0bb982df1f50372869d7ddc159aa89a14e85e&amp;source=constructor" width="100%" height="500" frameborder="0"></iframe>
     
         <div class="address__info">

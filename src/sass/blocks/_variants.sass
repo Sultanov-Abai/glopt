@@ -42,12 +42,35 @@
             font-size: 14px
             line-height: 20px
             text-align: center
+            &_hidden
+                padding: 19px 18px 10px 18px
         &-btn 
             display: flex
             justify-content: center
             align-items: center
             margin: 0 auto
             font-size: 15px
+    &__main
+        position: relative
+    &__showed
+        transition: 1s all
+        &_active
+            display: none
+    &__hidden
+        display: none
+        position: absolute
+        width: 100%
+        top: 14px
+        transition: 1s all
+        &_active
+            display: block
+    &__back
+        padding-left: 180px
+        color: $main-color
+        cursor: pointer
+        font-weight: 300
+        text-decoration: underline
+        text-transform: lowercase
     &__form
         position: relative
         &-icon

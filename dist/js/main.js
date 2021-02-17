@@ -1757,13 +1757,59 @@ module.exports = g;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/slider */ "./src/js/modules/slider.js");
+/* harmony import */ var _modules_delivery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/delivery */ "./src/js/modules/delivery.js");
+/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/slider */ "./src/js/modules/slider.js");
+
 
 window.addEventListener('DOMContentLoaded', function () {
   "use strict";
 
-  Object(_modules_slider__WEBPACK_IMPORTED_MODULE_0__["default"])('.carousel', '.carousel__inner', '.carousel__item', '.prev', '.next');
+  Object(_modules_delivery__WEBPACK_IMPORTED_MODULE_0__["default"])('.delivery__card', '.delivery__main', '.delivery__showed', '.delivery__hidden', '.delivery__card-btn');
+  Object(_modules_slider__WEBPACK_IMPORTED_MODULE_1__["default"])('.carousel', '.carousel__inner', '.carousel__item', '.prev', '.next');
 });
+
+/***/ }),
+
+/***/ "./src/js/modules/delivery.js":
+/*!************************************!*\
+  !*** ./src/js/modules/delivery.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_array_for_each_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.for-each.js */ "./node_modules/core-js/modules/es.array.for-each.js");
+/* harmony import */ var core_js_modules_es_array_for_each_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_for_each_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var delivery = function delivery(cardsSelector, mainSelector, showedSelector, hiddenSelector, btnsSelector) {
+  var cards = document.querySelectorAll(cardsSelector),
+      main = document.querySelectorAll(mainSelector),
+      showed = document.querySelectorAll(showedSelector),
+      hidden = document.querySelectorAll(hiddenSelector),
+      btns = document.querySelectorAll(btnsSelector);
+  cards.forEach(function (card, i) {
+    card.addEventListener('click', function (e) {
+      if (e.target.classList.contains('delivery__card-btn')) {
+        showed[i].classList.add('delivery__showed_active');
+        hidden[i].classList.add('delivery__hidden_active');
+        btns[i].style.cssText = "\n                    position: relative;\n                    top: 226px;\n                ";
+      }
+
+      if (e.target.classList.contains('delivery__back')) {
+        showed[i].classList.remove('delivery__showed_active');
+        hidden[i].classList.remove('delivery__hidden_active');
+        btns[i].style.cssText = "\n                    position: static;\n                    top: 0;\n                ";
+      }
+    });
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (delivery);
 
 /***/ }),
 
