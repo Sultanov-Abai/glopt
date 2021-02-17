@@ -1,0 +1,47 @@
+.overlay
+    position: fixed
+    top: 0
+    height: 100%
+    width: 100%
+    background-color: rgba(0, 0, 0, 0.5)
+.modal
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    padding: 20px
+    min-height: 240px
+    width: 280px
+    background-color: #fff
+    &__close
+        position: relative
+        top: -18px
+        right: -270px
+        color: $main-color
+        cursor: pointer
+        line-height: 18px
+        font-size: 40px
+    &__title
+        font-size: 18px
+        font-weight: 700
+        text-align: center
+    &__subtitle
+        line-height: 24px
+        font-size: 15px
+        text-align: center
+.form
+    &__inputs
+        display: flex
+        justify-content: center
+        flex-direction: column
+        margin: 15px 0
+    &__input
+        margin: 5px auto
+        padding: 10px
+        height: 35px
+        width: 220px
+        border: solid 1px #d4d4d4
+        border-radius: 100px
+        background-color: #fff
+#thanks
+    display: none   
