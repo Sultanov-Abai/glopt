@@ -1759,6 +1759,8 @@ module.exports = g;
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_delivery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/delivery */ "./src/js/modules/delivery.js");
 /* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/slider */ "./src/js/modules/slider.js");
+/* harmony import */ var _modules_modals__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/modals */ "./src/js/modules/modals.js");
+
 
 
 window.addEventListener('DOMContentLoaded', function () {
@@ -1766,6 +1768,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
   Object(_modules_delivery__WEBPACK_IMPORTED_MODULE_0__["default"])('.delivery__card', '.delivery__main', '.delivery__showed', '.delivery__hidden', '.delivery__card-btn');
   Object(_modules_slider__WEBPACK_IMPORTED_MODULE_1__["default"])('.carousel', '.carousel__inner', '.carousel__item', '.prev', '.next');
+  Object(_modules_modals__WEBPACK_IMPORTED_MODULE_2__["default"])();
 });
 
 /***/ }),
@@ -1810,6 +1813,51 @@ var delivery = function delivery(cardsSelector, mainSelector, showedSelector, hi
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (delivery);
+
+/***/ }),
+
+/***/ "./src/js/modules/modals.js":
+/*!**********************************!*\
+  !*** ./src/js/modules/modals.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var modals = function modals() {
+  var overlay = document.querySelector('.overlay'),
+      modal = document.querySelector('#call'),
+      thanks = document.querySelector('#thanks'),
+      btn = document.querySelector('.call_btn'),
+      close = document.querySelector('.modal__close');
+  btn.addEventListener('click', function () {
+    overlay.classList.add('overlay_active');
+    modal.classList.add('modal_active');
+    document.body.style.overflow = 'hidden';
+  }); // overlay.addEventListener('click', e => {
+  //     if (e.target == close || overlay) {
+  //         overlay.style.display = 'none';
+  //         modal.style.display = 'none';
+  //         document.body.style.overflow = '';
+  //     }
+  // });
+
+  close.addEventListener('click', function () {
+    modal.classList.remove('modal_active');
+    overlay.classList.remove('overlay_active');
+    document.body.style.overflow = '';
+  });
+  overlay.addEventListener('click', function (e) {
+    if (e.target == overlay) {
+      modal.classList.remove('modal_active');
+      overlay.classList.remove('overlay_active');
+      document.body.style.overflow = '';
+    }
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (modals);
 
 /***/ }),
 
