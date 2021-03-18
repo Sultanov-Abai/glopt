@@ -6,7 +6,6 @@ const slider = (wrapperSelector, innerSelector, slidesSelector, prevSelector, ne
           next = document.querySelector(nextSelector),
           width = window.getComputedStyle(wrapper).width;
 
-    let slideId = 1;
     let offset = 0;
 
     slides.forEach(slide => {

@@ -1887,7 +1887,6 @@ var slider = function slider(wrapperSelector, innerSelector, slidesSelector, pre
       prev = document.querySelector(prevSelector),
       next = document.querySelector(nextSelector),
       width = window.getComputedStyle(wrapper).width;
-  var slideId = 1;
   var offset = 0;
   slides.forEach(function (slide) {
     slide.style.width = width;
