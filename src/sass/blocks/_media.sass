@@ -148,3 +148,129 @@
             left: 32%
         .next
             right: 32%
+@media (max-width: 575px)
+    .title
+        font-size: 20px
+    header
+        .menu
+            justify-content: space-between
+            &__logo
+                padding-left: 5px
+                &-img
+                    height: 80px
+            &__list
+                position: absolute
+                left: -100%
+                flex-direction: column
+                width: 50%
+                background-color: rgba(0, 0, 0, 0.8)
+                transition: 1s all
+                &-active
+                    left: 0
+            .hamburger
+                display: block
+                position: absolute
+                left: 95px
+                top: 8%
+                transform: translateY(-50%)
+                width: 26px
+                height: 12px
+                span
+                    display: block
+                    height: 2px
+                    width: 100%
+                    background-color: #ffffff
+                    margin-bottom: 2px
+                    transition: 0.5s all
+                &_active
+                    span
+                        margin-bottom: -2px
+                        &:nth-child(1)
+                            transform: translateY(3px) rotate(-45deg)
+                        &:nth-child(2)
+                            display: none
+                        &:nth-child(3)
+                            transform: translateY(3px) rotate(45deg)
+            &__questions
+                flex-direction: column
+                padding-top: 24px
+                height: 50%
+                &-wrapper
+                    padding-bottom: 5px
+                &-text
+                    text-align: center
+            .call_btn
+                height: 40px
+                width: 150px
+        .promo
+            &__title
+                font-size: 28px
+            &__subtitle
+                font-size: 20px
+            &__list
+                flex-wrap: wrap
+            &__delimiter
+                padding-top: 10px
+            &__item
+                width: 49%
+            .btn-promo
+                margin: 15px auto 0 auto
+                font-size: 18px
+    .question
+        &__wrapper
+            padding: 0
+            padding-top: 10px
+            height: 80%
+        &__form
+            padding: 10px 20px
+            &-input
+                display: flex
+                margin: 0 auto
+    .delivery
+        &__form
+            &-list
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                margin: 150px 0 80px 0
+                padding: 0
+                border: 0
+            &-input
+                width: 70%
+            &-btn
+                top: 105%
+                &_left
+                    display: none
+                &_right
+                    display: none
+            &-icon
+                &_left
+                    display: none
+                &_right
+                    display: none
+    .scheme
+        &__item
+            padding: 20px 0
+            &:nth-child(4)
+                padding: 20px 0
+            &:nth-child(7)
+                padding: 20px 0
+    .review
+        .carousel
+            &__descr
+                width: 100%
+            .prev
+                left: 20%
+            .next
+                right: 20%
+    .address
+        &__info
+            width: 100%
+    .footer
+        &__wrapper
+            flex-wrap: wrap
+        &__descr
+            width: 70%
+        &__under
+            justify-content: center
+            flex-wrap: wrap
